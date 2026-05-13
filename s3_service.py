@@ -1,7 +1,7 @@
 import boto3
 import os
 
-BUCKET_NAME = os.getenv("seb-punto3-talleraws")
+BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
 s3_client = boto3.client("s3")
 
 def subir_imagen_s3(usuario: str, nombre_archivo: str, contenido: bytes, content_type: str) -> str:
